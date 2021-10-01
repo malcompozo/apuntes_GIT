@@ -1,0 +1,86 @@
+_________________GIT_________________
+
+---------------------------------------
+------ COMANDOS BÁSICOS ------
+---------------------------------------
+
+git config --global user.name "tu nombre"
+
+git config --global user.email "mail" -> setear configuraciones
+
+git -l  -> ver configuracion 
+para agregar init podemos hacer click secundario en la carpeta del repositorio creado y ejecutar Git Bash Here"
+
+git status -> para ver los status de los   archivos
+
+git commit -am "mensaje"-> agregar todo de una sola vez al repositorio + comentario (solo archivos modificados)
+
+git add . -> para agregar al estado de preparacion 
+
+git commit -m "mensaje"-> agregar al repositorio + comentarios a la bitacora
+
+git log -> ver bitacora
+
+
+------------------------------------------------
+----- DESHACER CAMBIOS HECHOS ------
+------------------------------------------------
+
+
+git checkout + nombre del archivo -> devuelve el archivo elegido hasta el ultimo commit hecho
+
+git checkout -f -> devuelve todos los archivos al ultimo commit
+
+
+---------------------------------------------------------
+QUITAR ARCHIVOS DEL AREA DE PREPARACION
+---------------------------------------------------------
+
+git restore --staged + nombre del archivo -> saca el archivo del estado de preparacion
+
+---------------------------------------------------
+----------- SUBIENDO / BAJANDO -----------
+---------------------------------------------------
+
+git push -> sube los ficheros comiteados al repo remoto
+git pull -> trae los ficheros del repo remoto al espacio de trabajo
+
+---------------------------------------------------
+-------------- CREANDO RAMAS --------------
+---------------------------------------------------
+
+**git log --raw** *muestra mas informacion de que paso en ese commit, M-modificate / A-added / D-delete*
+
+**git log --oneline** *muestra los commits en 1 sola linea con su cogido de hash*
+
+**git checkout -b (nombre de rama)** *creando nueva rama*
+
+**git branch** *muestra todas las ramas que tenemos*
+
+**git log --oneline --all** *muestra todos los commits de todas las rama*
+
+**git log --oneline --all --graph** *muestra puntos del arbol*
+
+**git switch (nombre de rama)** *para cambiar entre ramas*
+
+**** *muestra  el arbol de commits con sus ramas estando en la rama master o admin*
+
+--------------------------------------------------------
+-------------- FUSIONANDO RAMAS --------------
+------------ siempre situarse en el master -----------
+--------------------------------------------------------
+
+**git merge (nombre de la rama)** *mezcla la rama que nombras al master o main*
+
+/  luego consultar con log /
+
+**git branch -D (nombre de rama)**  *primero debes situarte en master y luego puedes eliminar la rama*
+
+--------------------------------------------
+------ 4.1 Resolviendo conflictos ------
+--------------------------------------------
+
+**si se modifica el mismo fichero desde distintas ramas deberás solucionar los conflictos en el editor, 
+marcara con HEAD, ==== y (nombre de la rama)  y elegir manualmente que se queda y que se borra**
+
+**git merge --abort** *aborta el merge*
